@@ -26,3 +26,10 @@ interests, hang out, and occasionally learn something. (Crazy right?)
 📍 **Where:** [Barnes and Nobles Cafe], [300 The Bridge St #100, Huntsville, AL 35806]
 
 If you can't make it, be sure to check back here for future meetups!
+
+| Month  | Date | Location |
+| ------ | ---- | - |
+| August | 30   | Barnes and Nobles Cafe |
+| September | 27 | Barnes and Nobles Cafe | 
+| October | 25 | TBD |
+| Etc... | TBD | TBD |
