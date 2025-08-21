@@ -1,6 +1,6 @@
 AUTHOR = 'Timothy Jesionowski'
 SITENAME = 'Light Machines'
-SITEURL = ""
+SITEURL = "https://light-machines.org"
 
 PATH = "content"
 
@@ -22,14 +22,18 @@ LINKS = (
     ("Jinja2", "https://palletsprojects.com/p/jinja/"),
     ("You can modify those links in your config file", "#"),
 )
+LINKS = None
 
 # Social widget
 SOCIAL = (
     ("You can add links in your config file", "#"),
     ("Another social link", "#"),
 )
+SOCIAL = None
 
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+DIRECT_TEMPLATES = []  # disables Pelican’s auto-generated index.html, archives.html, etc.
