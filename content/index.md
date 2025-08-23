@@ -22,7 +22,7 @@ interests, hang out, and occasionally learn something. (Crazy right?)
 
 ## Next Meetup
 
-📅 **When:** Saturday, September 30th, 2025 @ 2:00 PM  
+📅 **When:** Saturday, August 30th, 2025 @ 2:00 PM  
 📍 **Where:** [Barnes and Nobles Cafe], [300 The Bridge St #100, Huntsville, AL 35806]
 
 If you can't make it, be sure to check back here for future meetups!
