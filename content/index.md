@@ -1,5 +1,5 @@
 Title: About The Light Machines
-Date: 2025-08-20
+Date: 2025-11-11
 Slug: index
 Summary: Light Machines homepage.
 
@@ -16,26 +16,21 @@ McKenzie](https://www.bitsaboutmoney.com/).
 ## What do you guys do?
 
 We meet up every month or so to talk about our particular nerdy
-interests, hang out, and occasionally learn something. (Crazy right?)
+interests, hang out, and occasionally learn something.
 
 ---
 
 ## Next Meetup
 
-📅 **When:** Saturday, September 27th, 2025 @ 2:00 PM  
+📅 **When:** Saturday, November 22nd, 2025 @ 4:00 PM  
 📍 **Where:** [Barnes and Nobles Cafe], [300 The Bridge St #100, Huntsville, AL 35806]
 
 If you can't make it, be sure to check back here for future meetups!
 
-| Month  | Date | Location |
-| ------ | ---- | - |
-| September | 27 | Barnes and Nobles Cafe | 
-| October | 25 | TBD |
-| Etc... | TBD | TBD |
-
 ## Past Meetups
 | Month  | Date | Location |
 | ------ | ---- | - |
+| September | 27 | Barnes and Nobles Cafe |
 | August | 30   | Barnes and Nobles Cafe |
 | July | 26   | Golden Ride Cafe |
 | June | 21   | The Nook |
