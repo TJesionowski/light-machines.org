@@ -22,7 +22,7 @@ interests, hang out, and occasionally learn something.
 
 ## Next Meetup
 
-📅 **When:** Saturday, November 22nd, 2025 @ 4:00 PM  
+📅 **When:** Saturday, January 24th, 2026 @ 2:00 PM
 📍 **Where:** [Barnes and Nobles Cafe], [300 The Bridge St #100, Huntsville, AL 35806]
 
 If you can't make it, be sure to check back here for future meetups!
@@ -30,6 +30,8 @@ If you can't make it, be sure to check back here for future meetups!
 ## Past Meetups
 | Month  | Date | Location |
 | ------ | ---- | - |
+| December | 20 | Barnes and Nobles Cafe |
+| November | 22 | Barnes and Nobles Cafe |
 | September | 27 | Barnes and Nobles Cafe |
 | August | 30   | Barnes and Nobles Cafe |
 | July | 26   | Golden Ride Cafe |
