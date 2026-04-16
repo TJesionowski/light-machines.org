@@ -23,14 +23,14 @@ interests, hang out, and occasionally learn something.
 ## Next Meetup
 
 📅 **When:** Saturday, May 2nd, 2026 @ 2:00 PM
-📍 **Where:** [Barnes and Nobles Cafe], [300 The Bridge St #100, Huntsville, AL 35806]
+📍 **Where:** [Starbucks], [114 Heart of Huntsville Dr SW, Huntsville, AL 35801]
 
 If you can't make it, be sure to check back here for future meetups!
 
 ## Past Meetups
 | Month  | Date | Location |
 | ------ | ---- | - |
-| March | 21 | Barnes and Nobles Cafe |
+| March | 21 | Starbucks |
 | January | 24 | Barnes and Nobles Cafe |
 | December | 20 | Barnes and Nobles Cafe |
 | November | 22 | Barnes and Nobles Cafe |
