@@ -22,7 +22,7 @@ interests, hang out, and occasionally learn something.
 
 ## Next Meetup
 
-📅 **When:** Saturday, May 2nd, 2026 @ 2:00 PM
+📅 **When:** Saturday, April 25th, 2026 @ 2:00 PM
 📍 **Where:** [Starbucks], [114 Heart of Huntsville Dr SW, Huntsville, AL 35801]
 
 If you can't make it, be sure to check back here for future meetups!
