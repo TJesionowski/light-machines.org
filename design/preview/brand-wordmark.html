@@ -1,0 +1,76 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Wordmark</title>
+<link rel="stylesheet" href="card.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+<style>
+  .wm-host { padding: 8px 0 4px; }
+  .wm-svg { display: block; max-width: 100%; height: auto; }
+</style>
+</head>
+<body><div class="card" style="background:#FAF8F3">
+  <div class="wm-host">
+    <svg id="wm" class="wm-svg" xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 600 90" preserveAspectRatio="xMinYMid meet" aria-label="light-machines">
+      <defs>
+        <!-- soft outer glow used by both the cover-LED and the highlight -->
+        <filter id="led-glow" x="-200%" y="-200%" width="500%" height="500%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b1"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6"   result="b2"/>
+          <feMerge>
+            <feMergeNode in="b2"/>
+            <feMergeNode in="b1"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <!-- the wordmark text. The 'i' in 'machines' is wrapped so we can measure it.
+           letter-spacing baked in via 'textLength'/manual; we use the natural metrics. -->
+      <text id="wm-text" x="0" y="68"
+            font-family="'EB Garamond', serif"
+            font-weight="500"
+            font-size="72"
+            fill="#1A1A1A"
+            style="letter-spacing:-0.025em">light-mach<tspan id="wm-i">i</tspan>nes</text>
+
+      <!-- a paper-colored disc to hide the original 'i' tittle, then the LED on top.
+           Both are placed by JS once fonts have loaded. -->
+      <circle id="wm-cover" cx="-99" cy="-99" r="0" fill="#FAF8F3"/>
+      <!-- subtle outer halo, drawn beneath the dot -->
+      <circle id="wm-halo"  cx="-99" cy="-99" r="0" fill="#8FA4FF" opacity="0.35" filter="url(#led-glow)"/>
+      <circle id="wm-led"   cx="-99" cy="-99" r="0" fill="#0A1F8F"/>
+      <!-- inner highlight on the LED -->
+      <circle id="wm-hl"    cx="-99" cy="-99" r="0" fill="#ECE7DC" opacity="0.55"/>
+    </svg>
+  </div>
+  <div class="mono" style="margin-top:6px">EB Garamond Medium · −0.025em · the dot of the &lsquo;i&rsquo; is the LED, with a soft glow</div>
+</div>
+
+<script>
+  document.fonts.ready.then(() => {
+    const i      = document.getElementById('wm-i');
+    const cover  = document.getElementById('wm-cover');
+    const halo   = document.getElementById('wm-halo');
+    const led    = document.getElementById('wm-led');
+    const hl     = document.getElementById('wm-hl');
+
+    const bb = i.getBBox(); // bbox of the 'i' tspan in SVG user units
+    // EB Garamond: tittle of 'i' sits roughly at 18-22% from the bbox top, centered.
+    const cx = bb.x + bb.width / 2;
+    const cy = bb.y + bb.height * 0.20;
+
+    const r  = bb.width * 0.62;        // LED radius — slightly larger than the original tittle
+    const rCover = r * 1.55;            // cover wipes the original tittle area
+    const rHalo  = r * 1.65;
+
+    cover.setAttribute('cx', cx); cover.setAttribute('cy', cy); cover.setAttribute('r', rCover);
+    halo .setAttribute('cx', cx); halo .setAttribute('cy', cy); halo .setAttribute('r', rHalo);
+    led  .setAttribute('cx', cx); led  .setAttribute('cy', cy); led  .setAttribute('r', r);
+    // small specular highlight on upper-left of the LED
+    hl   .setAttribute('cx', cx - r * 0.32);
+    hl   .setAttribute('cy', cy - r * 0.32);
+    hl   .setAttribute('r',  r * 0.30);
+  });
+</script>
+</body></html>

@@ -1,0 +1,46 @@
+/* preview/card.css — shared shell for design-system tab cards.
+   Cards are deliberate single-mode demos: each card shows ONE mode
+   (light by default; dark cards opt in via .theme-dark on the body).
+   We lock the color-scheme to 'light' so the imported tokens don't
+   flip to dark on a dark-OS viewer. */
+@import url('../colors_and_type.css');
+
+:root { color-scheme: light; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FAF8F3;
+  color: #1A1A1A;
+  width: 700px;
+  overflow: hidden;
+}
+.card {
+  padding: 28px 32px;
+  box-sizing: border-box;
+  width: 700px;
+}
+.row { display: flex; gap: 16px; align-items: stretch; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  font-weight: 700;
+}
+.mono { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.swatch .chip {
+  height: 64px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px var(--rule);
+}
+.swatch .name { font-family: var(--font-sans); font-size: 12px; color: var(--ink); font-weight: 600; }
+.swatch .hex  { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3); }

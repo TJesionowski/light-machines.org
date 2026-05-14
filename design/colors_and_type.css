@@ -1,0 +1,385 @@
+/* =============================================================
+   light-machines — colors & type
+   The substance is illumination; the surface is paper and ink.
+   ============================================================= */
+
+/* --- Webfonts ---------------------------------------------------
+   Body serif:    EB Garamond  (Google Fonts)
+   UI sans:       Inria Sans   (Google Fonts)
+   Mono / code:   JetBrains Mono (Google Fonts)
+   Display serif: EB Garamond at large sizes w/ tight tracking
+   ---------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  /* ---------- Color: paper & ink ---------- */
+  --paper:        #FAF8F3;   /* warm off-white, page background */
+  --paper-2:      #F2EEE5;   /* recessed surfaces, code blocks, table stripes */
+  --paper-3:      #E8E2D4;   /* hairline-tinted dividers when 1px black is too loud */
+
+  --ink:          #1A1A1A;   /* primary text */
+  --ink-2:        #3D3A36;   /* secondary text, captions */
+  --ink-3:        #6B665E;   /* tertiary, metadata, sidenote numbers */
+  --ink-4:        #A39E94;   /* placeholders, disabled, faint */
+
+  --rule:         rgba(26, 26, 26, 0.12);  /* hairline divider */
+  --rule-strong:  rgba(26, 26, 26, 0.28);  /* meaningful divider */
+
+  /* ---------- Accent: the LED ---------- */
+  /* The blue from the logo. Used for links, marks, focused moments.
+     One accent. Restraint is generative. */
+  --led:          #0A1F8F;   /* deep LED blue, primary accent */
+  --led-bright:   #2541D9;   /* hover / active link */
+  --led-wash:     #E8EBF7;   /* link-popup background, selected state */
+
+  /* ---------- Marginalia: warm, secondary ---------- */
+  --amber:        #B8732A;   /* highlights, footnote markers, "noted" state */
+  --amber-wash:   #F6EDE0;
+
+  /* ---------- Semantic ---------- */
+  --success:      #3F7A3F;
+  --warn:         #B8732A;   /* same as amber on purpose */
+  --error:        #A0322E;
+
+  /* ---------- Selection ---------- */
+  --selection-bg: #FFE9A8;   /* a marker, like underlining a passage */
+  --selection-fg: var(--ink);
+
+  /* ---------- Type: families ---------- */
+  --font-serif:   "EB Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-sans:    "Inria Sans", "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono:    "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  --font-display: var(--font-serif);
+
+  /* ---------- Type: scale (modular, ratio ≈ 1.2 for prose, 1.333 for display) ---------- */
+  --fs-micro:     0.75rem;   /* 12px — sidenote markers, metadata */
+  --fs-small:     0.8125rem; /* 13px — captions, ui small */
+  --fs-ui:        0.9375rem; /* 15px — ui body */
+  --fs-body:      1.125rem;  /* 18px — prose body */
+  --fs-lead:      1.25rem;   /* 20px — lead paragraph */
+  --fs-h6:        1.0rem;
+  --fs-h5:        1.125rem;
+  --fs-h4:        1.3125rem; /* 21px */
+  --fs-h3:        1.5rem;    /* 24px */
+  --fs-h2:        1.875rem;  /* 30px */
+  --fs-h1:        2.5rem;    /* 40px */
+  --fs-display:   3.75rem;   /* 60px — essay titles, hero */
+  --fs-display-l: 5rem;      /* 80px — landing hero */
+
+  /* ---------- Type: weights ---------- */
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+
+  /* ---------- Type: leading & tracking ---------- */
+  --lh-tight:     1.15;
+  --lh-snug:      1.3;
+  --lh-prose:     1.55;   /* body reading rhythm */
+  --lh-loose:     1.75;
+  --tr-tight:     -0.02em;  /* large display */
+  --tr-normal:    0;
+  --tr-wide:      0.04em;
+  --tr-caps:      0.08em;   /* small caps / labels */
+
+  /* ---------- Layout: measure & rhythm ---------- */
+  --measure:        38rem;   /* ~640px, ~65ch of body serif */
+  --measure-narrow: 28rem;
+  --measure-wide:   52rem;
+  --gutter:         1.5rem;
+  --sidenote-w:     14rem;   /* right margin column for sidenotes */
+
+  /* Vertical rhythm = body line-height in px (≈28px).
+     All vertical spacing is a multiple of this. */
+  --rhythm:       1.75rem;   /* 28px */
+
+  /* ---------- Spacing scale ---------- */
+  --s-0:   0;
+  --s-1:   0.25rem;   /* 4 */
+  --s-2:   0.5rem;    /* 8 */
+  --s-3:   0.75rem;   /* 12 */
+  --s-4:   1rem;      /* 16 */
+  --s-5:   1.5rem;    /* 24 */
+  --s-6:   2rem;      /* 32 */
+  --s-7:   3rem;      /* 48 */
+  --s-8:   4rem;      /* 64 */
+  --s-9:   6rem;      /* 96 */
+
+  /* ---------- Radii (used sparingly; prose containers are square) ---------- */
+  --r-0:   0;
+  --r-1:   2px;       /* tight inputs */
+  --r-2:   4px;       /* buttons, popups */
+  --r-3:   8px;       /* figure tiles */
+
+  /* ---------- Elevation (used very sparingly — only for popups) ---------- */
+  --shadow-popup: 0 1px 2px rgba(26,26,26,0.06),
+                  0 8px 24px rgba(26,26,26,0.10);
+  --shadow-hairline: 0 0 0 1px var(--rule);
+
+  /* ---------- Motion (almost none) ----------
+     Motion is reserved for legibility, not chrome. */
+  --t-fast:  90ms;
+  --t-base:  160ms;
+  --ease:    cubic-bezier(.2,.6,.2,1);
+}
+
+/* =============================================================
+   Dark mode — calm near-black, not pure black.
+   The lampstand still bears the same light, just at night.
+   ============================================================= */
+:root[data-theme="dark"],
+.theme-dark {
+  --paper:        #14130F;
+  --paper-2:      #1C1B17;
+  --paper-3:      #262420;
+
+  --ink:          #ECE7DC;
+  --ink-2:        #C8C2B4;
+  --ink-3:        #8B867A;
+  --ink-4:        #5C584F;
+
+  --rule:         rgba(236, 231, 220, 0.14);
+  --rule-strong:  rgba(236, 231, 220, 0.30);
+
+  --led:          #8FA4FF;   /* the LED at night — luminous, not heavy */
+  --led-bright:   #B0BEFF;
+  --led-wash:     #1F2440;
+
+  --amber:        #C99060;   /* desaturated; sits beneath the ink, not above it */
+  --amber-wash:   #2A211A;
+
+  --selection-bg: #4A3F1A;
+  --selection-fg: var(--ink);
+}
+
+/* Respect OS preference unless user explicitly chose */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:        #14130F;
+    --paper-2:      #1C1B17;
+    --paper-3:      #262420;
+    --ink:          #ECE7DC;
+    --ink-2:        #C8C2B4;
+    --ink-3:        #8B867A;
+    --ink-4:        #5C584F;
+    --rule:         rgba(236, 231, 220, 0.14);
+    --rule-strong:  rgba(236, 231, 220, 0.30);
+    --led:          #8FA4FF;
+    --led-bright:   #B0BEFF;
+    --led-wash:     #1F2440;
+    --amber:        #C99060;
+    --amber-wash:   #2A211A;
+    --selection-bg: #4A3F1A;
+  }
+}
+
+/* =============================================================
+   Semantic / element styles
+   ============================================================= */
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-serif);
+  font-size: var(--fs-body);
+  line-height: var(--lh-prose);
+  color: var(--ink);
+  background: var(--paper);
+  font-feature-settings: "kern", "liga", "onum"; /* old-style figures in prose */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--selection-bg); color: var(--selection-fg); }
+
+/* Display & headings -------------------------------------------- */
+.lm-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  font-weight: var(--fw-regular);
+  color: var(--ink);
+}
+
+.lm-display-l { font-size: var(--fs-display-l); line-height: 1.05; letter-spacing: -0.025em; }
+
+h1, .lm-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  font-weight: var(--fw-regular);
+  margin: 0 0 var(--s-5);
+}
+
+h2, .lm-h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: -0.01em;
+  font-weight: var(--fw-regular);
+  margin: var(--s-7) 0 var(--s-3);
+}
+
+h3, .lm-h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  font-style: italic;
+  margin: var(--s-6) 0 var(--s-2);
+}
+
+h4, .lm-h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-bold);
+  margin: var(--s-5) 0 var(--s-2);
+}
+
+h5, .lm-h5 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tr-caps);
+  margin: var(--s-5) 0 var(--s-2);
+}
+
+h6, .lm-h6 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tr-caps);
+  color: var(--ink-3);
+  margin: var(--s-4) 0 var(--s-2);
+}
+
+/* Body text --------------------------------------------------- */
+p, .lm-p {
+  margin: 0 0 var(--rhythm);
+  text-wrap: pretty;
+  hyphens: auto;
+}
+
+.lm-lead {
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--ink-2);
+  font-style: italic;
+}
+
+.lm-small  { font-size: var(--fs-small); }
+.lm-micro  { font-size: var(--fs-micro); }
+.lm-meta   { font-family: var(--font-sans); font-size: var(--fs-small); color: var(--ink-3); letter-spacing: 0.01em; }
+.lm-label  { font-family: var(--font-sans); font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: var(--tr-caps); color: var(--ink-3); font-weight: var(--fw-bold); }
+
+/* Inline ------------------------------------------------------ */
+a {
+  color: var(--led);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+a:hover { color: var(--led-bright); background: var(--led-wash); }
+
+em, i, cite { font-style: italic; }
+strong, b   { font-weight: var(--fw-semibold); }
+
+/* Code -------------------------------------------------------- */
+code, kbd, samp, .lm-code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  font-feature-settings: "calt" 0;
+}
+:not(pre) > code {
+  background: var(--paper-2);
+  padding: 0.05em 0.35em;
+  border-radius: var(--r-1);
+}
+pre, .lm-pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  background: var(--paper-2);
+  border-left: 2px solid var(--rule-strong);
+  padding: var(--s-4) var(--s-5);
+  overflow-x: auto;
+  margin: var(--rhythm) 0;
+}
+
+/* Blockquote -------------------------------------------------- */
+blockquote, .lm-quote {
+  margin: var(--rhythm) 0;
+  padding-left: var(--s-5);
+  border-left: 2px solid var(--rule-strong);
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+/* Rules ------------------------------------------------------- */
+hr, .lm-rule { border: 0; border-top: 1px solid var(--rule); margin: var(--s-7) 0; }
+.lm-rule-strong { border-top: 1px solid var(--rule-strong); }
+.lm-rule-ornament { /* centered three dots, like a chapter break */
+  border: 0; text-align: center; margin: var(--s-7) 0;
+  color: var(--ink-3); font-family: var(--font-serif); letter-spacing: 1em;
+}
+.lm-rule-ornament::before { content: "·  ·  ·"; }
+
+/* Lists ------------------------------------------------------- */
+ul, ol { margin: 0 0 var(--rhythm); padding-left: var(--s-5); }
+li { margin-bottom: var(--s-2); }
+
+/* Figures ----------------------------------------------------- */
+figure { margin: var(--s-6) 0; }
+figcaption {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  color: var(--ink-3);
+  margin-top: var(--s-2);
+  line-height: 1.5;
+}
+
+/* Sidenote (gwern-style) -------------------------------------- */
+.lm-sidenote {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.lm-sidenote-marker {
+  font-family: var(--font-sans);
+  font-size: 0.7em;
+  vertical-align: super;
+  color: var(--amber);
+  font-weight: var(--fw-bold);
+  margin-left: 0.05em;
+}
+
+/* Drop cap (essay openers) ------------------------------------ */
+.lm-dropcap::first-letter {
+  font-family: var(--font-display);
+  font-size: 4.2em;
+  line-height: 0.85;
+  float: left;
+  padding: 0.05em 0.08em 0 0;
+  font-weight: var(--fw-regular);
+  color: var(--ink);
+}
+
+/* Layout helpers ---------------------------------------------- */
+.lm-measure        { max-width: var(--measure); }
+.lm-measure-narrow { max-width: var(--measure-narrow); }
+.lm-measure-wide   { max-width: var(--measure-wide); }
+.lm-stack > * + *  { margin-top: var(--rhythm); }
+
+/* Marker / highlight ------------------------------------------ */
+mark, .lm-mark {
+  background: var(--amber-wash);
+  color: var(--ink);
+  padding: 0 0.15em;
+  box-shadow: 0 -0.45em 0 var(--amber-wash) inset;
+}

@@ -1,0 +1,46 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Logo</title><link rel="stylesheet" href="card.css">
+<style>
+  .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:18px; margin-top:14px; }
+  .cell { display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px 6px; border-radius:6px; }
+  .cell.light { background:#FAF8F3; }
+  .cell.dark  { background:#14130F; color:#ECE7DC; }
+  .cell img { width:80px; height:80px; display:block; }
+  .cap { font-family:'Inria Sans',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+  .cell.light .cap { color:#6B665E; }
+  .cell.dark  .cap { color:#8B867A; }
+  .cell .desc { font-family:'Inria Sans',sans-serif; font-size:11px; line-height:1.4; text-align:center; }
+  .cell.light .desc { color:#3D3A36; }
+  .cell.dark  .desc { color:#C8C2B4; }
+</style>
+</head>
+<body><div class="card">
+  <div class="label">Logo — gear ring + LED · four variants · regenerable from script</div>
+  <div class="grid">
+    <div class="cell light">
+      <img src="../assets/logo-gear-led-blue.svg" alt="">
+      <div class="cap">Light · LED blue</div>
+      <div class="desc">primary</div>
+    </div>
+    <div class="cell light">
+      <img src="../assets/logo-gear-led-amber.svg" alt="">
+      <div class="cap">Light · amber</div>
+      <div class="desc">warm alternate</div>
+    </div>
+    <div class="cell dark">
+      <img src="../assets/logo-gear-led-blue-dark.svg" alt="">
+      <div class="cap">Dark · LED blue</div>
+      <div class="desc">with halo</div>
+    </div>
+    <div class="cell dark">
+      <img src="../assets/logo-gear-led-amber-dark.svg" alt="">
+      <div class="cap">Dark · amber</div>
+      <div class="desc">with halo</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:18px;margin-top:18px;align-items:flex-start">
+    <img src="../assets/logo-bulb.svg" style="width:80px;height:80px;display:block">
+    <div style="flex:1;font-family:'Inria Sans',sans-serif;font-size:12.5px;line-height:1.55;color:#3D3A36">
+      <strong style="font-weight:600">Lightbulb alternate</strong> still ships. The gear is now generated from a script (12 teeth, equal spacing, smooth fillets) so it can be re-cut at any size or tooth count without redrawing by hand. Both blue and amber LED variants exist in light and dark modes; the dark variants include a soft halo so the LED reads as <em>lit</em>.
+    </div>
+  </div>
+</div></body></html>

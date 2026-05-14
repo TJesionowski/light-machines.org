@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>light-machines</title>
+  <link rel="stylesheet" href="site.css">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const ESSAYS = [
+      { id: 'light-machines', year: 2026, title: 'On Light Machines', min: 21, status: 'finished' },
+      { id: 'instrument', year: 2025, title: 'The Instrument and Its User', min: 14, status: 'finished' },
+      { id: 'lampstand', year: 2025, title: 'The Lampstand: Humility Before What One Bears', min: 9, status: 'finished' },
+      { id: 'back-office', year: 2024, title: 'Back-Office Theory of Software', min: 18, status: 'finished' },
+      { id: 'weight', year: 2026, title: 'On the Weight of Capability', min: 11, status: 'progress' },
+      { id: 'figures', year: 2026, title: 'Figures as Sentences', min: 7, status: 'progress' },
+      { id: 'cybernetics', year: 2026, title: 'A Note on the Observer in the Loop', min: 5, status: 'draft' },
+      { id: 'liturgy-tools', year: 2026, title: 'Liturgical Form for Tools', min: 4, status: 'draft' },
+    ];
+
+    function App() {
+      const [route, setRoute] = useState('index');
+      const [theme, setTheme] = useState(() => {
+        return localStorage.getItem('lm-theme') || 'light';
+      });
+
+      useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('lm-theme', theme);
+      }, [theme]);
+
+      const navigate = (r) => { setRoute(r); window.scrollTo(0, 0); };
+      const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light');
+
+      return (
+        <div className="lm-shell" data-screen-label={`light-machines · ${route}`}>
+          <Header route={route} onNavigate={navigate} theme={theme} onToggleTheme={toggleTheme} />
+          <main className="lm-main">
+            {route === 'index' && <IndexPage essays={ESSAYS} onOpen={(id) => navigate('essay')} />}
+            {route === 'essay' && <EssayPage onBack={() => navigate('index')} />}
+            {route === 'about' && <AboutPage />}
+          </main>
+          <Footer />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+  </script>
+</body>
+</html>
