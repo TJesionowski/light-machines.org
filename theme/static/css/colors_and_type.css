@@ -116,6 +116,9 @@
                   0 8px 24px rgba(26,26,26,0.10);
   --shadow-hairline: 0 0 0 1px var(--rule);
 
+  /* ---------- Surface: header (translucent over body) ---------- */
+  --header-bg: rgba(250, 248, 243, 0.85);
+
   /* ---------- Motion (almost none) ----------
      Motion is reserved for legibility, not chrome. */
   --t-fast:  90ms;
@@ -150,6 +153,8 @@
 
   --selection-bg: #4A3F1A;
   --selection-fg: var(--ink);
+
+  --header-bg:    rgba(20, 19, 15, 0.85);
 }
 
 /* Respect OS preference unless user explicitly chose */
@@ -170,6 +175,7 @@
     --amber:        #C99060;
     --amber-wash:   #2A211A;
     --selection-bg: #4A3F1A;
+    --header-bg:    rgba(20, 19, 15, 0.85);
   }
 }
 
