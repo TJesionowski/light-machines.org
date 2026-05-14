@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="lm-page">
+  <section class="lm-hero">
+    <div class="eyebrow">Huntsville, Alabama &middot; monthly</div>
+    <h1>Light Machines</h1>
+    <p class="dek">An informal meetup for people who like to read closely and think out loud&mdash;often, but not only, about posts from the rationalist corner of the internet.</p>
+  </section>
+
+  <div class="lm-prose lm-prose--solo">
+    <div class="lm-prose-inner">
+      {{ article.content }}
+    </div>
+  </div>
+</div>
+{% endblock %}

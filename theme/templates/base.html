@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('lm-theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/colors_and_type.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/site.css">
+  <link rel="icon" type="image/svg+xml" href="{{ SITEURL }}/theme/img/logo-gear-led-blue.svg">
+</head>
+<body class="lm-shell">
+  <header class="lm-header">
+    <a class="wordmark" href="{{ SITEURL }}/" aria-label="{{ SITENAME }} — home">
+      <svg viewBox="0 0 600 90" preserveAspectRatio="xMinYMid meet" role="img" aria-label="{{ SITENAME }}">
+        <text x="0" y="68"
+              font-family="'EB Garamond', 'Iowan Old Style', Georgia, serif"
+              font-weight="500" font-size="72"
+              style="letter-spacing:-0.025em" fill="currentColor">light-mach<tspan>i</tspan>nes</text>
+        <circle cx="341" cy="22" r="11" fill="var(--led)" opacity="0.28"/>
+        <circle cx="341" cy="22" r="6.5" fill="var(--led)"/>
+        <circle cx="338.5" cy="19.5" r="2" fill="var(--paper)" opacity="0.55"/>
+      </svg>
+    </a>
+    <nav class="lm-nav">
+      <button class="lm-theme-toggle" type="button" data-lm-theme-toggle aria-label="Toggle color theme">
+        <span data-lm-theme-label>auto</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="lm-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="lm-footer">
+    <div class="lm-footer-inner">
+      <div>
+        <h4>{{ SITENAME }}</h4>
+        <p>An informal meetup in Huntsville, Alabama. <br>Once a month, in person.</p>
+      </div>
+      <div>
+        <h4>Colophon</h4>
+        <p>Set in EB&nbsp;Garamond, Inria&nbsp;Sans, and JetBrains&nbsp;Mono. <br>Built with <a href="https://getpelican.com/">Pelican</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ SITEURL }}/theme/js/theme-toggle.js"></script>
+</body>
+</html>

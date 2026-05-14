@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title|striptags }} &middot; {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="lm-page">
+  <a class="lm-back" href="{{ SITEURL }}/">&larr; Back to the index</a>
+
+  <header class="lm-essay-header">
+    <div class="lm-meta-strip">
+      <span>{{ article.date.strftime('%B %Y') }}</span>
+      {% if article.status_label %}<span class="sep">/</span><span>{{ article.status_label }}</span>{% endif %}
+      {% if article.read_time %}<span class="sep">/</span><span class="right">{{ article.read_time }} min read</span>{% endif %}
+    </div>
+    <h1>{{ article.title }}</h1>
+    {% if article.summary %}<p class="dek">{{ article.summary|striptags }}</p>{% endif %}
+  </header>
+
+  <div class="lm-prose">
+    <div class="lm-prose-inner">
+      {{ article.content }}
+    </div>
+  </div>
+</div>
+{% endblock %}

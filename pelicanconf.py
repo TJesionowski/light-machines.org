@@ -3,6 +3,7 @@ SITENAME = 'Light Machines'
 SITEURL = "https://light-machines.org"
 
 PATH = "content"
+THEME = "theme"
 
 TIMEZONE = 'America/Chicago'
 
@@ -37,3 +38,12 @@ DEFAULT_PAGINATION = False
 # RELATIVE_URLS = True
 
 DIRECT_TEMPLATES = []  # disables Pelican’s auto-generated index.html, archives.html, etc.
+
+# Single-page site: suppress category / author / tag archive output.
+CATEGORY_SAVE_AS = ""
+CATEGORIES_SAVE_AS = ""
+AUTHOR_SAVE_AS = ""
+AUTHORS_SAVE_AS = ""
+TAG_SAVE_AS = ""
+TAGS_SAVE_AS = ""
+ARCHIVES_SAVE_AS = ""
