@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "Bash(pelican:*)",
+      "Bash(.direnv/python-3.12/bin/pelican:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
