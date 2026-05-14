@@ -19,14 +19,15 @@ interests, hang out, and occasionally learn something.
 
 ## Next Meetup
 
-**When** — Saturday, April 25th, 2026 @ 2:00 PM  
-**Where** — Starbucks, 114 Heart of Huntsville Dr SW, Huntsville, AL 35801
+**When** — TBD  
+**Where** — TBD
 
 If you can't make it, be sure to check back here for future meetups.
 
 ## Past Meetups
 | Month  | Date | Location |
 | ------ | ---- | - |
+| April | 25 | Starbucks |
 | March | 21 | Starbucks |
 | January | 24 | Barnes and Nobles Cafe |
 | December | 20 | Barnes and Nobles Cafe |
