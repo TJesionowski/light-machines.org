@@ -19,7 +19,7 @@ interests, hang out, and occasionally learn something.
 
 ## Next Meetup
 
-**When** — Friday, June 27  
+**When** — Saturday, June 27  
 **Where** — TBD
 
 If you can't make it, be sure to check back here for future meetups.
