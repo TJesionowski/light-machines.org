@@ -19,8 +19,8 @@ interests, hang out, and occasionally learn something.
 
 ## Next Meetup
 
-**When** — Saturday, June 27  
-**Where** — TBD
+**When** — Saturday, June 27 at 2:00 PM  
+**Where** — Starbucks
 
 If you can't make it, be sure to check back here for future meetups.
 
